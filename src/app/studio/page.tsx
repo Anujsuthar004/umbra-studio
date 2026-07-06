@@ -25,7 +25,7 @@ export default function Studio() {
 
       <Reveal type="clip" className="w-full mb-32">
         <div className="relative w-full aspect-[21/9] bg-ink-deep">
-          <Image src="/images/studio_workshop.jpg" alt="Studio Workshop" fill className="object-cover" />
+          <Image src="/images/studio_workshop.jpg" alt="Studio Workshop" fill className="object-cover" sizes="100vw" priority />
         </div>
       </Reveal>
 

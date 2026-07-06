@@ -90,7 +90,7 @@ export default function Home() {
               <div className={`${i % 2 !== 0 ? 'md:order-2' : ''}`}>
                 <Reveal type="clip">
                   <div className="relative w-full aspect-[4/3] bg-ink-deep">
-                    <Image src={work.image} alt={`Image: ${work.name}`} fill className="object-cover" />
+                    <Image src={work.image} alt={`Image: ${work.name}`} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" priority />
                   </div>
                 </Reveal>
               </div>
