@@ -9,12 +9,12 @@ import { motion, AnimatePresence } from "framer-motion";
 const filters = ["All", "Residential", "Cultural", "Commercial", "Interiors"];
 
 const projects = [
-  { name: "Casa Penumbra", category: "Residential", location: "Marbella", year: "2024", image: "/images/casa_penumbra.png" },
-  { name: "The Meridian Pavilion", category: "Cultural", location: "Oslo", year: "2023", image: "/images/meridian_pavilion.png" },
-  { name: "Vantage House", category: "Residential", location: "Big Sur", year: "2022", image: "/images/vantage_house.png" },
-  { name: "Ash & Oak Loft", category: "Interiors", location: "London", year: "2024", image: "/images/ash_oak.png" },
-  { name: "Lumen Gallery", category: "Commercial", location: "Berlin", year: "2023", image: "/images/lumen_gallery.png" },
-  { name: "Fold House", category: "Residential", location: "Kyoto", year: "2022", image: "/images/fold_house.png" },
+  { name: "Casa Penumbra", category: "Residential", location: "Marbella", year: "2024", image: "/images/casa_penumbra.jpg" },
+  { name: "The Meridian Pavilion", category: "Cultural", location: "Oslo", year: "2023", image: "/images/meridian_pavilion.jpg" },
+  { name: "Vantage House", category: "Residential", location: "Big Sur", year: "2022", image: "/images/vantage_house.jpg" },
+  { name: "Ash & Oak Loft", category: "Interiors", location: "London", year: "2024", image: "/images/ash_oak.jpg" },
+  { name: "Lumen Gallery", category: "Commercial", location: "Berlin", year: "2023", image: "/images/lumen_gallery.jpg" },
+  { name: "Fold House", category: "Residential", location: "Kyoto", year: "2022", image: "/images/fold_house.jpg" },
 ];
 
 export default function Work() {

@@ -51,7 +51,7 @@ export function Hero() {
           y: bgTranslateY,
         }}
       >
-        <Image src="/images/hero_bg.png" alt="Hero Background" fill className="object-cover" priority />
+        <Image src="/images/hero_bg.jpg" alt="Hero Background" fill className="object-cover" priority />
       </motion.div>
       <div className="absolute inset-0 z-10 pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(13,11,9,0.8)_100%),linear-gradient(to_bottom,transparent_0%,rgba(13,11,9,1)_100%)]" />
 

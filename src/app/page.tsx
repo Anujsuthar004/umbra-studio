@@ -12,7 +12,7 @@ const works = [
     name: "Casa Penumbra",
     desc: "A sprawling brutalist residence carved into the hillside, using deep overhangs and textured concrete to sculpt the intense Mediterranean light into livable volumes.",
     meta: "Marbella, ES · 2024 · 620 m²",
-    image: "/images/casa_penumbra.png"
+    image: "/images/casa_penumbra.jpg"
   },
   {
     index: "02",
@@ -20,7 +20,7 @@ const works = [
     name: "The Meridian Pavilion",
     desc: "A public gallery and gathering space constructed entirely from mass timber and glass. The structure is designed to disappear into the surrounding forest.",
     meta: "Oslo, NO · 2023 · 1,900 m²",
-    image: "/images/meridian_pavilion.png"
+    image: "/images/meridian_pavilion.jpg"
   },
   {
     index: "03",
@@ -28,7 +28,7 @@ const works = [
     name: "Vantage House",
     desc: "Perched on a cliff edge, this minimal volume frames the Pacific Ocean through careful apertures, acting as an optical instrument for viewing the landscape.",
     meta: "Big Sur, US · 2022 · 430 m²",
-    image: "/images/vantage_house.png"
+    image: "/images/vantage_house.jpg"
   }
 ];
 

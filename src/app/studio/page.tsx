@@ -8,10 +8,10 @@ const values = [
 ];
 
 const partners = [
-  { name: "Ingrid Søholm", role: "Founding Partner", image: "/images/ingrid.png" },
-  { name: "Tomás Rivera", role: "Founding Partner", image: "/images/tomas.png" },
-  { name: "Naomi Okafor", role: "Partner, Interiors", image: "/images/naomi.png" },
-  { name: "Henrik Vold", role: "Partner, Technical", image: "/images/henrik.png" }
+  { name: "Ingrid Søholm", role: "Founding Partner", image: "/images/ingrid.jpg" },
+  { name: "Tomás Rivera", role: "Founding Partner", image: "/images/tomas.jpg" },
+  { name: "Naomi Okafor", role: "Partner, Interiors", image: "/images/naomi.jpg" },
+  { name: "Henrik Vold", role: "Partner, Technical", image: "/images/henrik.jpg" }
 ];
 
 export default function Studio() {
@@ -25,7 +25,7 @@ export default function Studio() {
 
       <Reveal type="clip" className="w-full mb-32">
         <div className="relative w-full aspect-[21/9] bg-ink-deep">
-          <Image src="/images/studio_workshop.png" alt="Studio Workshop" fill className="object-cover" />
+          <Image src="/images/studio_workshop.jpg" alt="Studio Workshop" fill className="object-cover" />
         </div>
       </Reveal>
 
