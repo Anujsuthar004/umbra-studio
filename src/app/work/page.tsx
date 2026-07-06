@@ -71,7 +71,7 @@ export default function Work() {
                   transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                   className="relative w-full aspect-[4/3] bg-ink-deep"
                 >
-                  <Image src={project.image} alt={project.name} fill className="object-cover" />
+                  <img src={project.image} alt={project.name} className="absolute inset-0 w-full h-full object-cover" />
                 </motion.div>
               </div>
               <div className="flex justify-between items-baseline mb-2">

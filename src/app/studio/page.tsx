@@ -25,7 +25,7 @@ export default function Studio() {
 
       <Reveal type="clip" className="w-full mb-32">
         <div className="relative w-full aspect-[21/9] bg-ink-deep">
-          <Image src="/images/studio_workshop.jpg" alt="Studio Workshop" fill className="object-cover" sizes="100vw" priority />
+          <img src="/images/studio_workshop.jpg" alt="Studio Workshop" className="absolute inset-0 w-full h-full object-cover" />
         </div>
       </Reveal>
 
@@ -66,9 +66,9 @@ export default function Studio() {
           <Reveal type="stagger" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {partners.map((partner) => (
               <Reveal type="stagger-item" key={partner.name} className="flex flex-col">
-                <div className="mb-6 relative w-full aspect-[3/4] bg-ink-deep">
-                  <Image src={partner.image} alt={`Portrait of ${partner.name}`} fill className="object-cover" />
-                </div>
+                <div className="relative w-full aspect-[3/4] bg-ink-deep mb-6">
+                <img src={partner.image} alt={partner.name} className="absolute inset-0 w-full h-full object-cover" />
+              </div>
                 <h3 className="font-display text-[22px] text-cream mb-2">{partner.name}</h3>
                 <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent">{partner.role}</p>
               </Reveal>
