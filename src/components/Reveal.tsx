@@ -60,7 +60,7 @@ export function Reveal({ children, type = "up", delay = 0, className }: RevealPr
         className={cn("overflow-hidden", className)}
         initial={{ clipPath: "inset(0 100% 0 0)", scale: 1.06 }}
         whileInView={{ clipPath: "inset(0 0% 0 0)", scale: 1 }}
-        viewport={baseViewport as any}
+        viewport={{ once: true, margin: "0px" }}
         transition={{ duration: 1.25, ease: [0.16, 0.84, 0.24, 1], delay }}
       >
         {children}
