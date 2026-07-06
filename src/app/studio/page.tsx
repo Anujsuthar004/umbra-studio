@@ -1,5 +1,5 @@
 import { Reveal } from "@/components/Reveal";
-import { Placeholder } from "@/components/Placeholder";
+import Image from "next/image";
 
 const values = [
   { num: "I", title: "Material honesty", desc: "We believe materials should express their true nature. Concrete should feel heavy, timber should show its grain, steel should carry tension visibly. We do not disguise." },
@@ -8,10 +8,10 @@ const values = [
 ];
 
 const partners = [
-  { name: "Ingrid Søholm", role: "Founding Partner" },
-  { name: "Tomás Rivera", role: "Founding Partner" },
-  { name: "Naomi Okafor", role: "Partner, Interiors" },
-  { name: "Henrik Vold", role: "Partner, Technical" }
+  { name: "Ingrid Søholm", role: "Founding Partner", image: "/images/ingrid.png" },
+  { name: "Tomás Rivera", role: "Founding Partner", image: "/images/tomas.png" },
+  { name: "Naomi Okafor", role: "Partner, Interiors", image: "/images/naomi.png" },
+  { name: "Henrik Vold", role: "Partner, Technical", image: "/images/henrik.png" }
 ];
 
 export default function Studio() {
@@ -24,7 +24,9 @@ export default function Studio() {
       </Reveal>
 
       <Reveal type="clip" className="w-full mb-32">
-        <Placeholder label="Image: Studio Workshop" aspect="21/9" />
+        <div className="relative w-full aspect-[21/9] bg-ink-deep">
+          <Image src="/images/studio_workshop.png" alt="Studio Workshop" fill className="object-cover" />
+        </div>
       </Reveal>
 
       <div className="px-[6vw]">
@@ -64,8 +66,8 @@ export default function Studio() {
           <Reveal type="stagger" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {partners.map((partner) => (
               <Reveal type="stagger-item" key={partner.name} className="flex flex-col">
-                <div className="mb-6">
-                  <Placeholder label={`Portrait: ${partner.name}`} aspect="3/4" />
+                <div className="mb-6 relative w-full aspect-[3/4] bg-ink-deep">
+                  <Image src={partner.image} alt={`Portrait of ${partner.name}`} fill className="object-cover" />
                 </div>
                 <h3 className="font-display text-[22px] text-cream mb-2">{partner.name}</h3>
                 <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent">{partner.role}</p>

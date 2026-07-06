@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export function Hero() {
@@ -48,10 +49,10 @@ export function Hero() {
           scale: 1.14,
           x: bgTranslateX,
           y: bgTranslateY,
-          backgroundImage: "repeating-linear-gradient(122deg, rgba(236,228,214,0.035) 0 2px, transparent 2px 15px)",
-          // animation: "drift 44s linear infinite" - can add to tailwind if needed
         }}
-      />
+      >
+        <Image src="/images/hero_bg.png" alt="Hero Background" fill className="object-cover" priority />
+      </motion.div>
       <div className="absolute inset-0 z-10 pointer-events-none bg-[radial-gradient(ellipse_at_center,transparent_0%,rgba(13,11,9,0.8)_100%),linear-gradient(to_bottom,transparent_0%,rgba(13,11,9,1)_100%)]" />
 
       {/* Content Block */}

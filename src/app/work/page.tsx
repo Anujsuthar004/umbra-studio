@@ -3,17 +3,18 @@
 import { useState } from "react";
 import { Reveal } from "@/components/Reveal";
 import { Placeholder } from "@/components/Placeholder";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 const filters = ["All", "Residential", "Cultural", "Commercial", "Interiors"];
 
 const projects = [
-  { name: "Casa Penumbra", category: "Residential", location: "Marbella", year: "2024" },
-  { name: "The Meridian Pavilion", category: "Cultural", location: "Oslo", year: "2023" },
-  { name: "Vantage House", category: "Residential", location: "Big Sur", year: "2022" },
-  { name: "Ash & Oak Loft", category: "Interiors", location: "London", year: "2024" },
-  { name: "Lumen Gallery", category: "Commercial", location: "Berlin", year: "2023" },
-  { name: "Fold House", category: "Residential", location: "Kyoto", year: "2022" },
+  { name: "Casa Penumbra", category: "Residential", location: "Marbella", year: "2024", image: "/images/casa_penumbra.png" },
+  { name: "The Meridian Pavilion", category: "Cultural", location: "Oslo", year: "2023", image: "/images/meridian_pavilion.png" },
+  { name: "Vantage House", category: "Residential", location: "Big Sur", year: "2022", image: "/images/vantage_house.png" },
+  { name: "Ash & Oak Loft", category: "Interiors", location: "London", year: "2024", image: "/images/ash_oak.png" },
+  { name: "Lumen Gallery", category: "Commercial", location: "Berlin", year: "2023", image: "/images/lumen_gallery.png" },
+  { name: "Fold House", category: "Residential", location: "Kyoto", year: "2022", image: "/images/fold_house.png" },
 ];
 
 export default function Work() {
@@ -68,8 +69,9 @@ export default function Work() {
                 <motion.div
                   whileHover={{ scale: 1.04 }}
                   transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                  className="relative w-full aspect-[4/3] bg-ink-deep"
                 >
-                  <Placeholder label={`Image: ${project.name}`} aspect="4/3" />
+                  <Image src={project.image} alt={project.name} fill className="object-cover" />
                 </motion.div>
               </div>
               <div className="flex justify-between items-baseline mb-2">

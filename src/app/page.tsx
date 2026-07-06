@@ -1,6 +1,7 @@
 import { Hero } from "@/components/home/Hero";
 import { Reveal } from "@/components/Reveal";
 import { Placeholder } from "@/components/Placeholder";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -11,6 +12,7 @@ const works = [
     name: "Casa Penumbra",
     desc: "A sprawling brutalist residence carved into the hillside, using deep overhangs and textured concrete to sculpt the intense Mediterranean light into livable volumes.",
     meta: "Marbella, ES · 2024 · 620 m²",
+    image: "/images/casa_penumbra.png"
   },
   {
     index: "02",
@@ -18,6 +20,7 @@ const works = [
     name: "The Meridian Pavilion",
     desc: "A public gallery and gathering space constructed entirely from mass timber and glass. The structure is designed to disappear into the surrounding forest.",
     meta: "Oslo, NO · 2023 · 1,900 m²",
+    image: "/images/meridian_pavilion.png"
   },
   {
     index: "03",
@@ -25,6 +28,7 @@ const works = [
     name: "Vantage House",
     desc: "Perched on a cliff edge, this minimal volume frames the Pacific Ocean through careful apertures, acting as an optical instrument for viewing the landscape.",
     meta: "Big Sur, US · 2022 · 430 m²",
+    image: "/images/vantage_house.png"
   }
 ];
 
@@ -85,7 +89,9 @@ export default function Home() {
             <div key={work.index} className={`grid grid-cols-1 md:grid-cols-[1.35fr_1fr] gap-[56px] items-center ${i % 2 !== 0 ? 'md:grid-cols-[1fr_1.35fr]' : ''}`}>
               <div className={`${i % 2 !== 0 ? 'md:order-2' : ''}`}>
                 <Reveal type="clip">
-                  <Placeholder label={`Image: ${work.name}`} aspect="4/3" />
+                  <div className="relative w-full aspect-[4/3] bg-ink-deep">
+                    <Image src={work.image} alt={`Image: ${work.name}`} fill className="object-cover" />
+                  </div>
                 </Reveal>
               </div>
               <Reveal type="up" delay={0.2} className={`flex flex-col ${i % 2 !== 0 ? 'md:order-1 md:pr-12' : 'md:pl-12'}`}>
