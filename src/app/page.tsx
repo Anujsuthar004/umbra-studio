@@ -56,10 +56,13 @@ const awards = [
 ];
 
 const press = ["FORMA", "PLINTH", "Séance", "ARCH·Q", "OBJET", "NORD—"];
-
 export default function Home() {
   return (
     <>
+      <div style={{ position: 'fixed', top: 0, left: 0, zIndex: 9999, background: 'red', padding: '10px' }}>
+        <p>Test Image:</p>
+        <img src="/images/casa_penumbra.jpg" style={{ width: '200px', height: '200px', objectFit: 'cover' }} />
+      </div>
       <Hero />
       
       {/* Manifesto Strip */}
